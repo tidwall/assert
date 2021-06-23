@@ -4,7 +4,7 @@
 
 
 This package provides an assert function for Go. 
-It's designed to work exactly like [assert](https://man7.org/linux/man-pages/man3/assert.3.html) in C.
+It's designed to work like [assert](https://man7.org/linux/man-pages/man3/assert.3.html) in C.
 
 ## Example
 
