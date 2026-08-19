@@ -23,8 +23,14 @@ func Assert(expression bool) {
 			if err == nil {
 				lines := strings.Split(string(data), "\n")
 				if ln-1 < len(lines) {
+					var aok string
 					if strings.Contains(lines[ln-1], "Assert") {
-						atext = strings.Split(lines[ln-1], "Assert")[1]
+						aok = "Assert"
+					} else if strings.Contains(lines[ln-1], "assert") {
+						aok = "assert"
+					}
+					if aok != "" {
+						atext = strings.Split(lines[ln-1], aok)[1]
 						if len(atext) > 0 && atext[0] == '(' {
 							// create a clean, single line expression
 							var cond string

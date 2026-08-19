@@ -18,7 +18,7 @@ var alt = func() string {
 	stderr = &buf
 	exit = func(code int) {}
 	Assert(false)
-	if !strings.Contains(buf.String(), `function [anonymous]`) {
+	if !strings.Contains(buf.String(), `, function `) {
 		panic("missing function")
 	}
 	return buf.String()
